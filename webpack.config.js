@@ -9,11 +9,6 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'style!css'
-            },
-            {
                 test: /\.styl$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'style!css!stylus'
@@ -28,7 +23,8 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel',
                 query: {
-                    presets: ['react', 'es2015', 'stage-2']
+                    presets: ['react', 'es2015', 'stage-2'],
+                    cacheDirectory: true
                 }
             }
         ]
