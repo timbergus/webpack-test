@@ -1,4 +1,4 @@
-# WebPack Test
+# [WebPack](https://webpack.github.io/) Test
 
 This is a test to see how WebPack works.
 
