@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha tests/index.js",
     "dev": "webpack-dev-server --content-base web/ --progress --color --inline --hot",
-    "prod": "mocha tests/index.js && webpack"
+    "prod": "mocha tests/index.js && webpack -p -d"
   },
   "keywords": [
     "webpack",
