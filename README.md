@@ -27,3 +27,5 @@ We are using WebPack loaders to import the files we need. In this app we are wor
 * [babel-preset-es2015](https://babeljs.io/docs/plugins/preset-es2015/)
 * [babel-preset-stage-2](https://babeljs.io/docs/plugins/preset-stage-2/)
 * [babel-loader](https://github.com/babel/babel-loader)
+
+We also have tests with `npm test`. And to obtain a production app, run `npm run prod`.
