@@ -37,7 +37,8 @@ import directives from './directives';
 
 const providers = ['$stateProvider', '$urlRouterProvider', '$ngReduxProvider'];
 
-angular.module('myApp', [router, filters, directives, ngRedux])
+angular
+    .module('myApp', [router, filters, directives, ngRedux])
     .config([...providers, (state, router, redux) => {
 
         state
