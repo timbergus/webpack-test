@@ -47,7 +47,7 @@ angular.module('myApp', [router, filters, directives, ngRedux])
 
         redux.createStoreWith(reducer, middleware, [devTools()]);
     }])
-    .run(($ngRedux, $rootScope) => {
+    .run(($ngRedux) => {
 
         ReactDOM.render(<Monitor store={ $ngRedux }/>, document.getElementById('devTools'));
     });
