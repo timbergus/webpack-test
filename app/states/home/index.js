@@ -6,5 +6,5 @@ export default {
     url          : '/',
     template     : Template({}),
     controllerAs : 'home',
-    controller   : () => new Controller()
+    controller   : ($scope, $ngRedux) => new Controller($scope, $ngRedux)
 };

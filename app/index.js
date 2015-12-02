@@ -3,16 +3,28 @@
 import angular from 'angular';
 import router from 'angular-ui-router';
 
+// Redux
+
+import ngRedux from 'ng-redux';
+import reducer from './store/index';
+import thunk from 'redux-thunk';
+
+let middleware = [thunk];
+
 import Home from './states/home';
 
 import filters from './filters';
 import directives from './directives';
 
-angular.module('myApp', [router, filters, directives])
-    .config(($stateProvider, $urlRouterProvider) => {
+const providers = ['$stateProvider', '$urlRouterProvider', '$ngReduxProvider'];
 
-        $stateProvider
+angular.module('myApp', [router, filters, directives, ngRedux])
+    .config([...providers, (state, router, redux) => {
+
+        state
             .state('home', Home);
 
-        $urlRouterProvider.otherwise('/');
-    });
+        router.otherwise('/');
+
+        redux.createStoreWith(reducer, middleware);
+    }]);
