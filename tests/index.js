@@ -3,3 +3,5 @@ require('babel-core/register')({
 });
 
 require('./_basic');
+require('./filters/_l33t');
+require('./directives/_info-box');
