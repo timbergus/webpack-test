@@ -4,7 +4,8 @@ class Controller {
 
     static mapStateToThis(state) {
         return {
-            count: state.counter
+            count: state.counter,
+            messages: state.messages
         };
     }
 

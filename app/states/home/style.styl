@@ -1,3 +1,38 @@
-body
-  color #00F
-  background-color black
+@require '../../styles/colors.styl'
+
+.c-button-round
+  display inline-block
+  width 30px
+  height 30px
+  border-width 3px
+  border-style solid
+  line-height 20px
+  text-align center
+  border-radius 50%
+  font-weight 700
+  font-size 1.8em
+  box-sizing border-box
+  margin 10px
+  cursor pointer
+
+  -webkit-touch-callout none
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
+
+  &.red
+    color: $pastelColors['red']
+    border-color: $pastelColors['red']
+  &.green
+    color: $pastelColors['green']
+    border-color: $pastelColors['green']
+  &.blue
+    color: $pastelColors['darkBlue']
+    border-color: $pastelColors['darkBlue']
+
+.c-display
+  display inline-block
+  min-width 20px
+  text-align center

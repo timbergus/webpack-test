@@ -1,5 +1,10 @@
 'use strict';
 
+import reset from './styles/reset.styl';
+import layout from './styles/layout.styl';
+
+// Angular
+
 import angular from 'angular';
 import router from 'angular-ui-router';
 
@@ -50,5 +55,5 @@ angular
     }])
     .run(($ngRedux) => {
 
-        ReactDOM.render(<Monitor store={ $ngRedux }/>, document.getElementById('devTools'));
+        //ReactDOM.render(<Monitor store={ $ngRedux }/>, document.getElementById('devTools'));
     });
