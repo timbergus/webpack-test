@@ -1,7 +1,11 @@
 const ADD = 'my-app/message/ADD';
 
 export function addMessage (message) {
-    return { type: ADD, content: message }
+    return function (dispatch) {
+        setTimeout(() => {
+            dispatch({ type: ADD, content: message });
+        }, 3000);
+    };
 }
 
 export default function reducer (state = [], action = {}) {
