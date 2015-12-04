@@ -7,4 +7,8 @@ div
     info-box
     info-box(funny="")
     input-box
-    div(ng-repeat="message in home.messages track by $index") {{ message | l33t }}
+
+    div.c-message-transform
+        message-l33t
+        message-reversed
+        message-without-vowels
