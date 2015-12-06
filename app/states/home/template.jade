@@ -12,3 +12,5 @@ div
         message-l33t
         message-reversed
         message-without-vowels
+
+    div(ng-show="home.countries.length", ng-repeat="country in home.countries | orderBy: 'capital'") {{ country.capital }} ({{ country.name }})

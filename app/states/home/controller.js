@@ -1,3 +1,4 @@
+import { getCountries } from '../../store/countries';
 import { incrementCounter, decrementCounter } from '../../store/counter';
 
 class Controller {
@@ -5,7 +6,8 @@ class Controller {
     static mapStateToThis(state) {
         return {
             count: state.counter,
-            messages: state.messages
+            messages: state.messages,
+            countries: state.countries
         };
     }
 
@@ -13,8 +15,10 @@ class Controller {
 
         this.content = 'Lorem ipsum dolor sit amet.';
 
-        let unsubscribe = $ngRedux.connect(Controller.mapStateToThis, { incrementCounter, decrementCounter })(this);
+        let unsubscribe = $ngRedux.connect(Controller.mapStateToThis, { getCountries, incrementCounter, decrementCounter })(this);
         $scope.$on('$destroy', unsubscribe);
+
+        this.getCountries();
     }
 }
 
