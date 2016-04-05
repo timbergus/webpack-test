@@ -41,11 +41,12 @@ import Home from './states/home';
 
 import filters from './filters';
 import directives from './directives';
+import components from './components';
 
 const providers = ['$stateProvider', '$urlRouterProvider', '$ngReduxProvider'];
 
 angular
-    .module('myApp', [router, filters, directives, ngRedux])
+    .module('myApp', [router, filters, directives, components, ngRedux])
     .config([...providers, (state, router, redux) => {
 
         state
