@@ -1,7 +1,7 @@
 import di from '../../util/di';
 import { addMessage } from '../../store/messages';
 
-class Link {
+export default class Link {
 
     constructor (scope) {
 
@@ -21,5 +21,3 @@ class Link {
         scope.$on('$destroy', unsubscribe);
     }
 }
-
-export default Link;

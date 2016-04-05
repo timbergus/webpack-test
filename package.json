@@ -4,6 +4,7 @@
   "description": "A WebPack test with Angular 1.x.",
   "main": "index.js",
   "scripts": {
+    "docs": "./node_modules/.bin/esdoc -c esdoc.json",
     "test": "nyc --reporter=lcov node test.js | tap-spec",
     "dev": "webpack-dev-server",
     "prod": "npm test && webpack -p -d"
@@ -25,6 +26,8 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "css-loader": "^0.23.0",
+    "esdoc": "^0.4.6",
+    "glob": "^7.0.3",
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "moment": "^2.12.0",

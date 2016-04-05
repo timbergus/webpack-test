@@ -1,6 +1,6 @@
 import di from '../../util/di';
 
-class Link {
+export default class Link {
 
     static mapStateToThis(state) {
         return {
@@ -14,5 +14,3 @@ class Link {
         scope.$on('$destroy', unsubscribe);
     }
 }
-
-export default Link;

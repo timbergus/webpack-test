@@ -1,4 +1,4 @@
-class Link {
+export default class Link {
 
     static getFunnyMessage () {
 
@@ -22,5 +22,3 @@ class Link {
         }
     }
 }
-
-export default Link;

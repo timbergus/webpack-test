@@ -1,0 +1,5 @@
+{
+    "title": "My Software Name",
+    "source": "./src",
+    "destination": "./docs"
+}
